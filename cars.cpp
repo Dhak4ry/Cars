@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <cstdlib>
 #include<vector>
+#include <algorithm>
 using namespace std;
 struct CAR{
     string marka;
@@ -39,7 +40,8 @@ void InputCAR(vector<CAR> & vec) {
 
 void SortCAR(vector<CAR>vec)
 {
-
+  
+    
 }
 
 void ViewCAR(vector<CAR>vec)
@@ -64,7 +66,7 @@ void SearchCAR(vector<CAR>vec)
 
 void DeleteCAR(vector<CAR>&vec)
 {
-        vec.erase(vec.begin());
+        vec.erase(vec.end());
         for (int i=0; i<vec.size(); i++)
   { 
     cout<<setw(10)<<vec[i].marka<<setw(15)<<vec[i].model<<setw(5)<<vec[i].year<<setw(5)<<vec[i].cubatura<<setw(8)<<vec[i].power<<setw(8)<<vec[i].price<<endl;
