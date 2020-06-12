@@ -38,14 +38,17 @@ void InputCAR(vector<CAR> & vec) {
   }
 }
 
+bool compare (CAR a,CAR b)
+ { return (a.marka<b.marka); }
+ 
 void SortCAR(vector<CAR>vec)
 {
   int i;
-  sort(vec.begin(), vec.end());
+  sort(vec.begin(), vec.end(), compare);
   for (int i = 0; i < vec.size(); i++) {
       cout << setw(10) << vec[i].marka << setw(15) << vec[i].model << setw(5) << vec[i].year << setw(5) << vec[i].cubatura << setw(8) << vec[i].power << setw(8) << vec[i].price << endl;
     }
-    char purvaBukvaNaKola = vec[i].marka[0];
+   // char purvaBukvaNaKola = vec[i].marka[0];
     
 }
 
